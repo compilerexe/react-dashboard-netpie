@@ -6,15 +6,8 @@
   <meta name="viewport">
   <title>appName: react dashboard netpie</title>
 
-
-  <!-- build:css styles/vendor.css -->
-  <!-- bower:css -->
-  <!-- endbower -->
-  <!-- endbuild -->
-
-  <!-- build:css styles/main.css -->
-  <link rel="stylesheet" href="../bower_components/bulma/css/bulma.css">
-  <link rel="stylesheet" href="../bower_components/components-font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
 </head>
@@ -25,61 +18,15 @@
   your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<div class="container">
-  <section class="section">
-    <div class="container">
-      <h1 class="title">NETPIE.io<i class="fa-li fa fa-spinner fa-spin netpie-connecting"></i></h1>
-      <h2 class="subtitle">
-        webapp template
-      </h2>
-      <div class="notification">
-        <p>appName: react dashboard netpie</p>
-        <p>appId: React</p>
-        <p>appKey: StXlRc85KwNYJD5</p>
-        <p>appSecret: snjmdRNEwG6GuwTofpl6UxfGe</p>
-      </div>
+<div id="app"></div>
 
-      <div class="field is-grouped">
-        <div class="control">
-          <button class="publish-on-button button is-primary">ON</button>
-        </div>
-        <div class="control">
-          <button class="publish-off-button button-off button is-danger">OFF</button>
-        </div>
-      </div>
-    </div>
-  </section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.13/moment-timezone.min.js"></script>
 
-  <section class="section">
-    <div class="container">
-      <article class="message">
-        <div class="message-header">
-          <p class="message-header-text">Message</p>
-        </div>
-        <div class="message-body">
-          <p class="title" id='incoming-messages'>connecting..</p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-</div>
-
-
-<!-- build:js scripts/vendor.js -->
-<script src="../bower_components/jquery/dist/jquery.min.js"></script>
-<script src="../bower_components/moment/moment.js"></script>
-<script src="../bower_components/moment-timezone/moment-timezone.js"></script>
-<!-- bower:js -->
-<!-- endbower -->
-<!-- endbuild -->
-
-<!-- build:js scripts/main.js -->
 <script src="libs/microgear.js"></script>
 <script src="scripts/config.js"></script>
 <script src="scripts/main.js"></script>
-<!-- endbuild -->
-
 
 <script type="text/javascript">
   jQuery('document').ready(function ($) {
@@ -94,5 +41,10 @@
     })
   })
 </script>
+
+<script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+<script src="scripts/app.js"></script>
+
 </body>
 </html>

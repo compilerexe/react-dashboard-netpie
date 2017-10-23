@@ -1,11 +1,4 @@
-const Config = {}
 const Global = {}
-
-Config.appId = 'React'
-Config.appKey = 'StXlRc85KwNYJD5'
-Config.appSecret = 'snjmdRNEwG6GuwTofpl6UxfGe'
-Config.topic = '/gearname/topic1'
-Config.alias = 'html'
 
 console.log(Config)
 microgear = Microgear.create({
@@ -16,7 +9,7 @@ microgear = Microgear.create({
 microgear.on('connected', function () {
   console.log('netpie connected')
   microgear.setAlias(Config.alias)
-  microgear.subscribe('/gearname/+')
+  microgear.subscribe('/gearname/#')
   clearInterval(Global.timer1)
   hideNetpieConnectingIcon()
   $('#incoming-messages').html('connected')
@@ -31,10 +24,27 @@ microgear.on('absent', function (event) {
 })
 
 microgear.on('message', function (topic, msg) {
+
   const $p = $('<p class="title">' + msg + '</p>')
   var dateString = moment().format('h:mm:ss a')
-  $('#incoming-messages').html($p)
-  $('.message-header-text').text('[' + dateString + '] Message: ' + topic)
+
+  if (topic === '/React/gearname/ch1') {
+
+    $('#incoming-messages-ch1').html($p)
+    $('#topic-header-ch1').html('[' + dateString + '] Topic : ' + '<span style="color: yellow">' + topic + '</span>')
+
+  } else if (topic === '/React/gearname/ch2') {
+
+    $('#incoming-messages-ch2').html($p)
+    $('#topic-header-ch2').html('[' + dateString + '] Topic : ' + '<span style="color: yellow">' + topic + '</span>')
+
+  } else {
+
+    $('#incoming-messages-ch3').html($p)
+    $('#topic-header-ch3').html('[' + dateString + '] Topic : ' + '<span style="color: yellow">' + topic + '</span>')
+
+  }
+
 })
 
 function hideNetpieConnectingIcon () {
