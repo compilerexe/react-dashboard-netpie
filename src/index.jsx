@@ -11,6 +11,18 @@ class Topic extends React.Component {
               </div>
               <div className="message-body">
                 <p className="title" id={this.props.topicId}>connecting..</p>
+
+                <div className="field has-addons">
+
+                  <input className="input" type="text" id={this.props.fieldMessage}
+                         placeholder="Type your message to topic ..."/>
+
+                  <a className="button is-link" id={this.props.publishButton}>
+                    Publish
+                  </a>
+
+                </div>
+
               </div>
             </article>
           </div>
@@ -39,9 +51,12 @@ const main = (
       </div>
     </section>
 
-    <Topic topicHeader='topic-header-ch1' topicId='incoming-messages-ch1'/>
-    <Topic topicHeader='topic-header-ch2' topicId='incoming-messages-ch2'/>
-    <Topic topicHeader='topic-header-ch3' topicId='incoming-messages-ch3'/>
+    <Topic topicHeader='topic-header-ch1' topicId='incoming-messages-ch1' fieldMessage='field-msg-ch1'
+           publishButton='publish-ch1'/>
+    <Topic topicHeader='topic-header-ch2' topicId='incoming-messages-ch2' fieldMessage='field-msg-ch2'
+           publishButton='publish-ch2'/>
+    <Topic topicHeader='topic-header-ch3' topicId='incoming-messages-ch3' fieldMessage='field-msg-ch3'
+           publishButton='publish-ch3'/>
 
   </div>
 

@@ -31,14 +31,22 @@
 <script type="text/javascript">
   jQuery('document').ready(function ($) {
     connect_netpie()
-    // var topic = $('#topic-input').val()
-    // var payload = $('#payload-input').val()
-    $('.publish-on-button').click(function () {
-      microgear.publish(Config.topic, 'ON')
+
+    $('#publish-ch1').click(function () {
+      microgear.publish('/gearname/ch1', $('#field-msg-ch1').val(), true)
+      $('#field-msg-ch1').val(null)
     })
-    $('.publish-off-button').click(function () {
-      microgear.publish(Config.topic, 'OFF')
+
+    $('#publish-ch2').click(function () {
+      microgear.publish('/gearname/ch2', $('#field-msg-ch2').val(), true)
+      $('#field-msg-ch2').val(null)
     })
+
+    $('#publish-ch3').click(function () {
+      microgear.publish('/gearname/ch3', $('#field-msg-ch3').val(), true)
+      $('#field-msg-ch3').val(null)
+    })
+
   })
 </script>
 
