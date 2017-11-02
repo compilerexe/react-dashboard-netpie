@@ -31,17 +31,17 @@ microgear.on('message', function (topic, msg) {
   if (topic === '/React/gearname/ch1') {
 
     $('#incoming-messages-ch1').html($p)
-    $('#topic-header-ch1').html('[' + dateString + '] Topic : ' + '<span style="color: yellow">' + topic + '</span>')
+    $('#topic-header-ch1').html('[' + dateString + '] Topic : ' + '<span style="color: red">' + topic + '</span>')
 
   } else if (topic === '/React/gearname/ch2') {
 
     $('#incoming-messages-ch2').html($p)
-    $('#topic-header-ch2').html('[' + dateString + '] Topic : ' + '<span style="color: yellow">' + topic + '</span>')
+    $('#topic-header-ch2').html('[' + dateString + '] Topic : ' + '<span style="color: red">' + topic + '</span>')
 
   } else {
 
     $('#incoming-messages-ch3').html($p)
-    $('#topic-header-ch3').html('[' + dateString + '] Topic : ' + '<span style="color: yellow">' + topic + '</span>')
+    $('#topic-header-ch3').html('[' + dateString + '] Topic : ' + '<span style="color: red">' + topic + '</span>')
 
   }
 
